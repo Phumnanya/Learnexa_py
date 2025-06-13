@@ -1,0 +1,4 @@
+venvy/
+__pycache__/
+*.pyc
+*.log
