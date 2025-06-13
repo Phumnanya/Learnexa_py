@@ -1,0 +1,419 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header {
+    height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.contents {
+    width: fit-content;
+    height: auto;
+    padding: 10px;
+}
+.content {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+}
+.contents img {
+    display: block;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+@media (max-width: 800px) {.contents img {width: 50px; zoom: 2;}}
+@media (min-width: 800px) {.contents img {width: 300px;}}
+.contents a {
+    text-decoration: none;
+    color: inherit;
+}
+.dash img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+@media (max-width: 800px) {.dash img {width: 20px; height: 20px;}}
+.contents i {
+    color: #610094;
+}
+.contents button {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+}
+.login {
+    border: 1px solid #610094;
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 4px 15px;
+    text-align: center;
+}
+.login a {
+    text-decoration: none;
+    color: inherit;
+}
+.login:hover {
+    color: white;
+    background-color: #610094;
+    text-decoration: none;
+}
+.content input[type=search] {
+    box-sizing: border-box;
+    padding: 2px 6px;
+    width: 100%;
+    border: 2px solid #610094;
+    border-radius: 18px;
+}
+@media (max-width: 800px) {.content input[type=search] {border-radius: 0px;}}
+
+.teamsbg {
+    width: 100%;
+    height: fit-content;
+    background-image: url(./images/austin-distel-wD1LRb9OeEo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 3em 2em;
+    background-repeat: no-repeat;
+}
+@media (max-width: 800px) {.teamsbg{padding: 3em 1em;}}
+
+.teams {
+    background-color: white;
+    padding: 15px 30px;
+    width: 30em;
+    box-sizing: border-box;
+}
+@media (max-width: 800px) {.teams {margin: 0 auto; width: 80%;}}
+
+.teams button {
+    padding: 10px 18px ;
+    background-color: #610094;
+    color: white;
+    border: none;
+}
+.courses-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.courses-list {
+    width: fit-content;
+    padding: 5px 15px;
+}
+.courses-list button {
+    border: none;
+    color: gray;
+}
+.courses-list button:hover {
+    color: white;
+    background-color: #610094;
+}
+.splide-container {
+    width: 97%;
+    height: fit-content;
+    border: #610094 solid;
+    margin: 1em auto;
+    padding: 20px;
+}
+.courses {
+    width: 100%;
+    border: groove;
+}
+.courses img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.course {
+    margin: 5px auto;
+    width: 100%;
+    padding: 15px;
+}
+.course i {
+    color: goldenrod;
+}
+#javascript {
+    display: none;
+}
+#web {
+    display: none;
+}
+.ratings-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0;
+    margin: 2em 0;
+    background-color: lightgray;
+}
+.ratings {
+    width: 22%;
+    padding: 10px 30px;
+    background-color: #610094;
+    color: white;
+    text-align: center;
+}
+@media (max-width: 800px) {.ratings {width: 50%; padding: 0%;}}
+
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 800px) {.skill-list {flex-direction: column;}}
+.creative {
+    width: 30%;
+    padding: 20px 10px;
+}
+@media (max-width: 800px) {.creative {width: 100%;}}
+.list {
+    width: 65%;
+    padding: 10px 30px;
+}
+@media (max-width: 800px) {.list {width: 100%;}}
+.list i {
+    color: #610094;
+}
+.events-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 800px) {.events-container {flex-direction: column;}}
+.events {
+    width: 50%;
+    height: fit-content;
+    padding: 10px;
+    border: groove;
+    margin: 10px;
+}
+@media (max-width: 800px) {.events {width: 100%;}}
+.calimage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+@media (max-width: 800px) {.calimage {justify-content: center;}}
+.calendar {
+    width: fit-content;
+    background-color: #610094;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-right: 10px;
+    border-radius: 12px 18px;
+}
+.events img {
+    width: 50%;
+    height: 200px;
+    object-fit: contain;
+}
+.events a {
+    text-decoration: none;
+    color: inherit;
+}
+.featuredbg {
+    background-color: lightgray;
+    width: 100%;
+    padding: 30px 10px;
+    margin: 3em 0;
+}
+.featured-topics-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.featured-topics {
+    width: 22%;
+    padding: 10px 20px;
+}
+@media (max-width: 800px) {.featured-topics {width: 50%;}}
+
+.featured-topics a {
+    color: #610094;
+    font-weight: bolder;
+}
+footer {
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #610094;
+    color: white;
+}
+.bottom-links-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-links {
+    width: 30%;
+}
+.bottom-links a {
+    text-decoration: none;
+    color: inherit;
+}
+.bottom-links img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+}
+
+
+
+/*************************************************************sign up page **********************************************************/
+.form-container {
+    width: 70%;
+    margin: 2em auto;
+    border: groove;
+    padding: 20px;
+}
+@media (max-width: 800px) {.form-container {width: 90%;}}
+.google {
+    width: 60%;
+    padding: 5px 25px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px auto;
+    border: groove;
+}
+.google:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (max-width: 800px) {.google {width: 90%;}}
+.google a {
+    text-decoration: none;
+    color: inherit;
+}
+.google img {
+    width: 50px;
+    height: 30px;
+    object-fit: contain;
+}
+input[type=text], select {
+    width: 100%;
+    height: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: inline-block;
+}
+input[type=text]:hover {
+    border-color: #610094;
+}
+select:hover {
+    border-color: #610094;
+}
+input[type=password] {
+    width: 100%;
+    height: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: inline-block;
+}
+input[type=password]:hover {
+    border-color: #610094;
+}
+input[type=email] {
+    width: 100%;
+    height: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: inline-block;
+}
+input[type=email]:hover {
+    border-color: #610094;
+}
+input[type=button] {
+    background-color: #610094;
+    color: white;
+    width: 80%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    padding: 12px 20px;
+    display: block;
+    margin: 0 auto;
+}
+input[type=button]:hover {
+    background-color: black;
+    border-color: white;
+}
+input[type=date] {
+    width: 100%;
+    height: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: inline-block;
+}
+input[type=date]:hover {
+    border-color: #610094;
+}
+input[type=number] {
+    width: 100%;
+    height: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: inline-block;
+}
+input[type=number]:hover {
+    border-color: #610094;
+}
+input[type=file] {
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+}
+.form-container span {
+    color: red;
+}
+#success {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 5em auto;
+}
+#success a {
+    color: #610094;
+}
+#success i {
+    color: #610094;
+}
+
+
+/*************************************************************Login page **********************************************************/
+.forgot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.forgot-content {
+    width: 50%;
+    padding: 10px;
+    color: #610094;
+}
+.forgot-content a {
+    text-decoration: none;
+    color: #610094;
+}
