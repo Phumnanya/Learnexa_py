@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/Croix.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/aos css.css')}}">
+	    <title>Croix stores</title>   
+    </head>
+    <body class="container-fluid px-0 mx-0">
+        <div class="container-fluid px-0 mx-0" id="sticky">
+            <header class="container-fluid px-1 mx-0">
+                <div class="tdown"><p>Your store : <b>Eustace Mbanefo</b></p> 
+                 <div><i class="fas fa-angle-down me-3"></i></div>
+                 </div>
+                 <div class="search">
+                     <div class="search-row"><img src="{{ url_for('static', filename='logo.png')}}" id="image" alt="Croix logo"></div>
+                     <div class="search-row"><button type="button" class="dropdown dropdown-toggle data-bs-toggle">
+                        <i class="fa-solid fa-bars fa-2x"></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#topdeals">Top Deals</a></li>
+                            <li><a class="dropdown-item" href="#dofdday">Deals of the Day</a></li>
+                            <li><a class="dropdown-item" href="#membership">Croix Membership</a></li>
+                        </ul>
+                    </div>
+                     <div class="search-row" id="remove" style="flex-grow: 10"><input type="search" placeholder="search"
+                         onfocus="howdy(this)" onblur="howdy_out(this)"></div>
+                     <div class="search-row"><i class="fas fa-shopping-cart fa-2x"></i></i></div>
+                 </div>
+                 <div class="links" id="hide">
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#topdeals">Top Deals</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#dofdday">Deals of the Day</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#membership">Croix Membership</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#credit">Credit Cards</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#gift">Gift Cards</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#ideas">Gift Ideas</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#health">Health & Wellness</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#outlet">Croix Outlet</a>
+                     </div>
+                     <div class="links-box-items" onmouseover="hover(this)" onmouseout="hover_out(this)">
+                         <a href="#business">Croix Business</a>
+                     </div>
+                 </div>
+             </header>
+        </div>
+        
+        
+        <div class="intro-ad">
+            <img src="{{ url_for('static', filename='logo.png')}}" alt="Croix logo">
+        </div>
+
+        <div class="line"><div class="arrivals">New arrivals</div></div>
+
+        <div class="arrivals-frame">
+            <div class="arrivals-box">
+                <div class="arrivals-box-items">
+                    <img src="{{ url_for('static', filename='images/handheld.png')}}" alt="Gaming handheld" >
+                    <a href="#gamestore">ASUS ROG Ally 7" 120Hz FHD 1080p Gaming Handheld - AMD Ryzen Z1
+                        <br>Extreme Processor - 512GB - white
+                    </a>
+                </div>
+                <div class="arrivals-box-items">
+                    <img src="{{ url_for('static', filename='images/tv1-removebg-preview.png')}}" alt="QLED tv">
+                    <a href="#tvstore">Amazon - 43" Class Omni QLED Series 4K UHD smart fire TV</a>
+                </div>
+            </div>
+            <div class="container-fluid mx-0 px-0"><a href="#more">See more products
+                <span style="float: right; font-weight: bolder;">>>></span></a>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="arrivals-frame">
+            <div class="arrivals-box">
+                <div class="signin-boxes" style="border-right-style: groove;">
+                    <h3>Sign in to Croix Stores</h3>
+                    <p>Croix Store members get free shipping with no minimum purchase. Plus,<br>exclusive offers and more</p>
+                    <button type="button" class="btn btn-lg btn-primary">Sign in</button><br><br><br><br>
+                    <a href="#account">Create Account</a>
+                </div>
+                <div class="signin-boxes">
+                    <button type="button" class="topdeals">Top Deals</button>
+                    <img src="{{ url_for('static', filename='images/airp4.png')}}" alt="Apple Airpods">
+                    <a href="#account">Apple - Airpods Pro (2ndgeneration) - White</a><br>
+                    <b>$199.99</b>
+                    <p style="text-decoration: line-through;">$249.99</p>
+                    <a href="#shop">Shop all Top Deals</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="arrivals-frame">
+            <b class="text-dark">Today's top picks</b>
+            <div class="topics">
+                <div class="arrivals-box-items" style="padding: 0;">
+                    <img src="{{ url_for('static', filename='images/laptop1.jpg')}}" alt="MacBook Air"><br>
+                    <a href="#account">MacBook Air 13.3" Laptop - Apple M1 chip -8GB<br> Memory - 256GB SSD - Space Gray</a>
+                </div>
+                <div class="arrivals-box-items" style="padding: 0;">
+                    <img src="{{ url_for('static', filename='images/handheld.png')}}" alt="Gaming handheld">
+                    <a href="#gamestore">ASUS ROG Ally 7" 120Hz FHD 1080p Gaming Handheld - AMD Ryzen Z1
+                    Extreme Processor - 512GB - white</a>
+                </div>
+                <div class="arrivals-box-items" style="padding: 0;">
+                    <img src="{{ url_for('static', filename='images/airp4.png')}}" alt="Apple Airpods Pro"><br><br>
+                    <a href="#account">Apple - Airpods Pro (2ndgeneration) - White</a>
+                </div>        
+            </div>
+        </div>
+
+        <div class="ad-holder"><img src="{{ url_for('static', filename='images/members ad gif.gif')}}" alt="Membership"></div><br>
+
+        <div class="line"><b class="text-dark">Trending now <span class="text-muted">(6 items)</span></b></div>
+
+        <div class="trending">
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/airp4.png')}}" alt="Apple Airpods Pro"><br>
+                <a href="trends">Apple - Airpods Pro <br>(2nd generation) <br>- White</a><br>
+                <span id="rating0"></span> (10,115)<br>
+                <b>$199.99</b><br>
+                <p style="text-decoration: line-through;">$249.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/istockphoto-465689911-612x612-removebg-preview.png')}}" alt="MacBook Air"><br>
+                <a href="#account">MacBook Air 13.3" Laptop - Apple M1 chip - 8GB Memory</a><br>
+                <span id="rating1"></span> (15,491)<br>
+                <b>$799.99</b><br>
+                <p style="text-decoration: line-through;">$999.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/istockphoto-1396307692-612x612-removebg-preview.png')}}" alt="gaming laptop"><br>
+                <a href="#account">ASUS - ROG Zephyrus 14" WQXGA 120Hz Gaming Laptop</a><br>
+                <span id="rating2"></span><i class='far fa-star'></i> (9311)<br>
+                <b>$999.99</b><br>
+                <p style="text-decoration: line-through;">$1649.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/istockphoto-465791066-612x612-removebg-preview.png')}}" alt="lenovo laptop">
+                <a href="#account">Lenovo - ideapad 3i<br> 15.6" FHD Touch Laptop - Core i5</a><br>
+                <span id="rating3"></span> (193)<br>
+                <b>$429.99</b><br>
+                <p style="text-decoration: line-through;">$629.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/tv2-removebg-preview.png')}}" alt="Samsung tv" style="margin-bottom: 1em;">
+                <a href="#account">SAMSUNG 65" Class <br>TU690T Crystal UHD<br> 4K Smart TV</a><br>
+                <span id="rating4"></span> (15)<br>
+                <b>$449.99</b><br>
+                <p style="text-decoration: line-through;">$669.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/vinicius-amnx-amano-lQejbNKNby4-unsplash-removebg-preview.png')}}" alt="Apple ipad"><br><br>
+                <a href="#account">Apple - 10.9-inch iPad (Latest Model) wit Wi-Fi - 64GB - Blue</a><br>
+                <span id="rating5"></span> (2,362)<br>
+                <b>$399.00</b><br>
+                <p style="text-decoration: line-through;">$449.00</p>
+            </div>
+        </div>
+
+        <div class="line mb-3"><b class="text-dark">Our featured offers</b></div>
+        <div class="f-offers">
+            <div class="offers-box">
+                <img src="{{ url_for('static', filename='images/marques-kaspbrak.png')}}" alt="smart tv">
+            </div>
+            <div class="offers-box">
+                <b><a href="#smarttvstore">Smart Tv as low as $69.99</a></b>
+                <p>Insignia<sup style="z-index: -1;">TM</sup>  model NS-24F201NA23 is $69.99(not pictured) </p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="f-offers">
+            <div class="offers-box">
+                <img src="{{ url_for('static', filename='images/phone.png')}}" alt="Samsung Galaxy">
+            </div>
+            <div class="offers-box">
+                <b><a href="#smartphonestore">Save up to $225 instantly</a></b>
+                <p>on unlocked Samsung Galaxy S23 Series<br>Minimum savings is $100. Terms and conditions apply</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="f-offers">
+            <div class="offers-box">
+                <img src="{{ url_for('static', filename='images/grill.png')}}" alt="Traeger grill">
+            </div>
+            <div class="offers-box">
+                <b><a href="#utensilstore">Save up to 20% on select Traeger grills and accessories</a></b>
+                <p>Minimum savings is 10%</p>
+            </div>
+        </div>
+        <div class="line mb-5"></div>
+
+<!--shipping offers-->
+        <div class="f-offers">
+            <div class="offers-box">
+                <i class="fas fa-shipping-fast fa-3x"></i>
+                <div class="shippingbox">
+                    <b>Free shipping</b>
+                    <p class="text-muted">on order $35 and up</p>
+                </div>
+            </div>
+            <div class="offers-box">
+                <i class="fas fa-hourglass-end fa-3x"></i>
+                <div class="shippingbox">
+                    <b>Ready in one hour</b>
+                    <p class="text-muted">with Store Pickup</p>
+                </div>
+            </div>
+            <div class="offers-box">
+                <i class="fas fa-box fa-3x"></i>
+                <div class="shippingbox">
+                    <b>Same day delivery.</b>
+                    <p class="text-muted">Door to Door</p>
+                </div>
+            </div>
+        </div>
+
+<!--Best selling items-->
+        <div class="line mt-5"><b class="text-dark">Best selling items <span class="text-muted">(12 items)</span></b></div>
+        <div class="trending">
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/airp4.png')}}" alt="Apple Airpods Pro"><br>
+                <a href="trends">Apple - Airpods Pro <br>(2nd generation) - White</a><br>
+                <span id="rating6"></span> (10,115)<br>
+                <b>$199.99</b><br>
+                <p style="text-decoration: line-through;">$249.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/bluetooth1.png')}}" alt="MacBook Air"><br>
+                <a href="#account">Zealot S67 Big battery wireless bluetooth speaker - 60W</a><br>
+                <span id="rating7"></span><i class='far fa-star'></i> (15,491)<br>
+                <b>$799.99</b><br>
+                <p style="text-decoration: line-through;">$999.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/handheld.png')}}" alt="gaming laptop"><br>
+                <a href="#account">ASUS ROG Ally 7" 120Hz FHD 1080p Gaming Handheld</a><br>
+                <span id="rating8"></span> (9311)<br>
+                <b>$999.99</b><br>
+                <p style="text-decoration: line-through;">$1649.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/istockphoto-465689911-612x612-removebg-preview.png')}}" alt="lenovo laptop"><br>
+                <a href="#account">HP - 15.6" Chromebook-intel Processor N200 - 800</a><br>
+                <span id="rating9"></span><i class='far fa-star'></i> (193)<br>
+                <b>$429.99</b><br>
+                <p style="text-decoration: line-through;">$629.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/visual watch 2.png')}}" alt="Samsung tv" style="margin-bottom: 1em;">
+                <hr class="mb-0 text-white">
+                <hr class="mt-0 mb-1 text-white">
+                <a href="#account">Apple Smart Wrist watch with bands bracelet strap - all colors</a><br>
+                <span id="rating10"></span><i class='far fa-star'></i> (15)<br>
+                <b>$449.99</b><br>
+                <p style="text-decoration: line-through;">$669.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/AR.png')}}" alt="Apple ipad">
+                <hr class="mb-0 text-white">
+                <hr class="mt-0 mb-1 text-white">
+                <a href="#account">VRG Pro Virtual Rety 3D VR glasses for smartphones - 5-7 inches</a><br>
+                <span id="rating11"></span> (2,362)<br>
+                <b>$599.00</b><br>
+                <p style="text-decoration: line-through;">$649.00</p>
+            </div>
+<!--row 2 of best selling items-->
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/grill2.png')}}" alt="Apple Airpods Pro"><br>
+                <a href="#trends">moveable barbeque outdoor charcoal grill</a><br>
+                <span id="rating12"></span><i class='far fa-star'></i> (10,115)<br>
+                <b>$199.99</b><br>
+                <p style="text-decoration: line-through;">$249.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/black watch.png')}}" alt="MacBook Air"><br>
+                <a href="#wristwatch">Digital Wrist watch with black leather strap - silver</a><br>
+                <span id="rating13"></span> (13,491)<br>
+                <b>$799.99</b><br>
+                <p style="text-decoration: line-through;">$999.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/home theatre1.png')}}" alt="sound system"><br>
+                <a href="#account">Djack powerful thunder sound system DJ-L2</a><br>
+                <span id="rating14"></span> (9311)<br>
+                <b>$999.99</b><br>
+                <p style="text-decoration: line-through;">$1649.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/philips iron.png')}}" alt="Philips iron"><br>
+                <a href="#account">Philips quality steel steam iron - GC1740</a><br>
+                <span id="rating15"></span> (193)<br>
+                <b>$429.99</b><br>
+                <p style="text-decoration: line-through;">$629.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/headset.png')}}" alt="Samsung tv" style="margin-bottom: 1em;">
+                <hr class="mb-0 text-white">
+                <hr class="mt-0 mb-1 text-white">
+                <a href="#account">P47 bluetooth headphones, FM Radio, SD card MP3 - white</a><br>
+                <span id="rating16"></span><i class='far fa-star'></i> (15)<br>
+                <b>$449.99</b><br>
+                <p style="text-decoration: line-through;">$669.99</p>
+            </div>
+            <div class="trending-boxes">
+                <img src="{{ url_for('static', filename='images/bluetooth2.png')}}" alt="JBL">
+                <hr class="mb-0 text-white">
+                <hr class="mt-0 mb-1 text-white">
+                <a href="#account">JBL charge 5 (Waterptoof bluetooth speaker) - black</a><br>
+                <span id="rating17"></span> (2,362)<br>
+                <b>$599.00</b><br>
+                <p style="text-decoration: line-through;">$649.00</p>
+            </div>
+        </div>
+<!--bottom logistics-->
+        <div class="container-fluid pt-5 mb-5" id="bottom">
+            <div class="f-offers">
+                <div class="center">
+                    <i class="fas fa-phone fa-2x"></i>
+                    <p style="color: #DA0037;">Call our support center</p>
+                </div>
+                <div class="center">
+                    <i class="fas fa-box fa-2x"></i>
+                    <p style="color: #DA0037;">Check your order status</p>
+                </div>
+                <div class="center">
+                    <i class="fas fa-shipping-fast fa-2x"></i>
+                    <p style="color: #DA0037;">Shipping, Delivery and store pickup</p>
+                </div>
+                <div class="center">
+                    <i class="fas fa-sync-alt fa-2x"></i>
+                    <p style="color: #DA0037;">Return and Exchanges</p>
+                </div>
+            </div>
+            <div class="logistics-column">
+                <div class="logistics-items">
+                    <a href="#more">Order & Purchases<span style="float: right; font-weight: bolder;"><i class="fas fa-angle-down"></i></span></a>       
+                </div>
+                <div class="logistics-items">
+                    <a href="#more">Payment options<span style="float: right; font-weight: bolder;"><i class="fas fa-angle-down"></i></span></a>       
+                </div>
+                <div class="logistics-items">
+                    <a href="#more">Rewards & Membership<span style="float: right; font-weight: bolder;"><i class="fas fa-angle-down"></i></span></a>       
+                </div>
+                <div class="logistics-items">
+                    <a href="#more">Partnerships<span style="float: right; font-weight: bolder;"><i class="fas fa-angle-down"></i></span></a>       
+                </div>
+                <div class="logistics-items">
+                    <a href="#more">About Croix Stores<span style="float: right; font-weight: bolder;"><i class="fas fa-angle-down"></i></span></a>       
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-3 ms-4"><a href="signin" id="btsignin">Sign in or Create Account</a></div>
+        <div class="line"></div>
+        <h3 class="ms-4 mt-3 mt-5">Get the latest deals and more</h3>
+        <footer class="ms-4 mb-5">
+            <input type="email" placeholder="enter email address" onfocus="howdy(this)" onblur="howdy_out(this)">
+            <button type="button" class="btn btn-md btn-primary ms-2">Sign up</button>
+        </footer>
+        <div class="line"></div>
+        <div class="topics mt-5 mb-5">
+            <div class="offers-box"><a href="#twitter"><i class="fab fa-twitter fa-2x"></i></a></div>
+            <div class="offers-box"><a href="#instagram"><i class="fab fa-instagram fa-2x"></i></a></div>
+            <div class="offers-box"><a href="#linkedin"><i class="fab fa-linkedin fa-2x"></i></a></div>
+            <div class="offers-box"><a href="#github"><i class="fab fa-github-square fa-2x"></i></a></div>
+        </div>
+        <div class="line"></div>
+        <h5 style="color: #DA0037; text-align: center;">&copy; Eustace Mbanefo 2023</h5>
+        
+
+        
+         <script src="{{ url_for('static', filename='js/Croix.js')}}"></script>
+         <script src="{{ url_for('static', filename='js/aos.js')}}"></script>
+         <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+         
+         
+
+    </body>
+</html>

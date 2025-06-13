@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="{{ url_for('static', filename='./css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='LearNexa.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='aos css.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='splide.min.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='./img/20231014_112754_0000.png')}}">
+	    <title>LearNexa</title>  
+    </head>
+    <body class="px-0 mx-0 container-fluid">
+      <header>
+          <div class="contents"><img src="{{ url_for('static', filename='./img/20231014_112754_0000-removebg-preview.png')}}" 
+            alt="LearNexa logo"></div>
+          <div class="content">
+            <input type="search" placeholder="search">
+          </div>
+          <div class="contents"><a href="dashboard.html"><div class="dash">
+            <img src="{{ url_for('static', filename='./images/generated_photos_64db3eb669f114000a6977b0.jpg')}}" alt="admin"></div></a></div>
+          <div class="contents"><div class="login"><a href="Login.html">Log in</a></div></div>
+          <div class="contents"><div class="login text-light" id="signup"><a href="signup.html">Sign up</a></div></div>
+      </header>
+<!--Teams and why they use LearNexa-->
+      <div class="teamsbg">
+        <div class="teams">
+          <h2>Build ready-for-anything teams</h2>
+          <p>See why leading organizations choose to learn with LearNexa</p>
+          <button type="button">Request a demo</button>
+        </div>
+      </div>
+<!--selection of courses-->
+      <div class="container mt-4 ps-2" id="one">
+        <h2>A broad selection of courses</h2>
+        <p>choose from over 210,000 online video courses with new additions published every month</p>
+      </div>
+
+      <div class="courses-flex">
+        <div class="courses-list"><button type="button" onclick="displaypython()">Python</button></div>
+        <div class="courses-list"><button type="button" onclick="displayjs()">JavaScript</button></div>
+        <div class="courses-list"><button type="button" onclick="displayweb()">Web Development</button></div>
+      </div>
+<!--Python courses-->
+      <div class="splide-container" id="python">
+        <div class="expand">
+          <h3>Expand your career opportunities with Python</h3>
+          <p>Take one of LearNexa's range of Python courses and learn how to code using this incredibly useful language. <br>
+            Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. <br>
+            You'll learn how to build everything from games to sites to apps.
+          </p>
+          <div class="login"><a href="#explore">Explore Python</a></div>
+        </div><br>
+        <div class="splide" role="group" aria-label="Splide">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/images (3).png')}}" alt="python icon">
+                            <div class="course">
+                              <h5>The complete Python Bootcamp from zero to hero in Python</h5>
+                              <p class="text-muted">Amara Okechukwu</p>
+                              <span id="rating0"></span> (10,115)<br>
+                              <b>$28.45</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/rubaitul-azad-ZIPFteu-R8k-unsplash.jpg')}}" alt="python icon">
+                            <div class="course">
+                              <h5>Automate the boring stuff with Python programming</h5>
+                              <p class="text-muted">Ludwig Dieter</p>
+                              <span id="rating1"></span> (10,518)<br>
+                              <b>$27.75</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/istockphoto python.jpg')}}" alt="python icon">
+                            <div class="course">
+                              <h5>100 Days of code: the complete Python Pro bootcamp for 2023</h5>
+                              <p class="text-muted">Eustace Mbanefo</p>
+                              <span id="rating2"></span> (8,335)<br>
+                              <b>$24.77</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="courses">
+                          <img src="{{ url_for('static', filename='./images/pexels-realtoughcandycom-11035474.jpg')}}" alt="python icon">
+                          <div class="course">
+                            <h5>Machine learning A-Z<sup>TM</sup>: AI, Python & R + ChatGPT</h5>
+                            <p class="text-muted">Xiao Lin</p>
+                            <span id="rating3"></span> (12,255)<br>
+                            <b>$38.45</b>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="courses">
+                        <img src="{{ url_for('static', filename='./images/python keyboard.jpg')}}" alt="python icon">
+                        <div class="course">
+                          <h5>Python for Data Science and Machine Learning bootcamp</h5>
+                          <p class="text-muted">James Lincoln</p>
+                          <span id="rating4"></span> (9,627)<br>
+                          <b>$30.50</b>
+                        </div>
+                      </div>
+                  </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+<!--Javascript courses-->
+      <div class="splide-container" id="javascript">
+        <div class="expand">
+          <h3>Grow your software developmment skills with JavaScript</h3>
+          <p>JavaScript is a text based computer programming language used to make dynamic web pages. A must learn for <br>
+            aspiring web developers or programmers. JavaScript can be used for features like image carousels, displaying <br>
+            countdowns and timers, and playing media on a web page.
+          </p>
+          <div class="login"><a href="#explore">Explore JavaScript</a></div>
+        </div><br>
+        <div class="splide" role="group" aria-label="Splide" id="mygenre">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/javascript1.jpg')}}" alt="javascript icon">
+                            <div class="course">
+                              <h5>The complete JavaScript course 2023: from zero to expert</h5>
+                              <p class="text-muted">Amara Okechukwu</p>
+                              <span id="rating4"></span> (10,115)<br>
+                              <b>$28.45</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/javascript2.jpg')}}" alt="javascript icon">
+                            <div class="course">
+                              <h5>JavaScript - basic to advanced, step by step</h5>
+                              <p class="text-muted">Ludwig Dieter</p>
+                              <span id="rating5"></span> (10,518)<br>
+                              <b>$27.75</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/certification.jpg')}}" alt="javascript icon">
+                            <div class="course">
+                              <h5>CSS & JavaScript - certification course for beginners</h5>
+                              <p class="text-muted">Eustace Mbanefo</p>
+                              <span id="rating6"></span> (8,335)<br>
+                              <b>$24.77</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="courses">
+                          <img src="{{ url_for('static', filename='./images/javascript1.jpg')}}" alt="javascript icon">
+                          <div class="course">
+                            <h5>JavaScript - understanding the logics</h5>
+                            <p class="text-muted">Xiao Lin</p>
+                            <span id="rating3"></span> (12,255)<br>
+                            <b>$38.45</b>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="courses">
+                        <img src="{{ url_for('static', filename='./images/javascript3.jpg')}}" alt="javascript icon">
+                        <div class="course">
+                          <h5>JavaScript for beginners - complete introduction</h5>
+                          <p class="text-muted">James Lincoln</p>
+                          <span id="rating4"></span> (9,627)<br>
+                          <b>$30.50</b>
+                        </div>
+                      </div>
+                  </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+<!--Web development courses-->
+      <div class="splide-container" id="web">
+        <div class="expand">
+          <h3>Build websites and applications with Web development</h3>
+          <p>The world of web development is as wide as the internet itself. Much of our social and vocational lives play out <br>
+            on the internet. Which prompts new industries aimed at creating, managing, and debugging the websites and applications <br>
+            that we increasingly rely on.
+          </p>
+          <div class="login"><a href="#explore">Explore Web Development</a></div>
+        </div><br>
+        <div class="splide" role="group" aria-label="Splide" id="webdev">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/certification.jpg')}}" alt="webdev icon">
+                            <div class="course">
+                              <h5>The complete 2023 Web Development bootcamp</h5>
+                              <p class="text-muted">Amara Okechukwu</p>
+                              <span id="rating10"></span> (10,115)<br>
+                              <b>$28.45</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/dev1.jpg')}}" alt="webdev icon">
+                            <div class="course">
+                              <h5>The Web developers advanced bootcamp for 2023 </h5>
+                              <p class="text-muted">Ludwig Dieter</p>
+                              <span id="rating11"></span> (10,518)<br>
+                              <b>$27.75</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                          <div class="courses">
+                            <img src="{{ url_for('static', filename='./images/dev2.jpg')}}" alt="webdev icon">
+                            <div class="course">
+                              <h5>Web Development masterclass - online certification course</h5>
+                              <p class="text-muted">Eustace Mbanefo</p>
+                              <span id="rating7"></span> (8,335)<br>
+                              <b>$24.77</b>
+                            </div>
+                          </div>
+                      </li>
+                      <li class="splide__slide">
+                        <div class="courses">
+                          <img src="{{ url_for('static', filename='./images/dev3.jpg')}}" alt="webdev icon">
+                          <div class="course">
+                            <h5>The complete Web developer course 3.0</h5>
+                            <p class="text-muted">Xiao Lin</p>
+                            <span id="rating8"></span> (12,255)<br>
+                            <b>$38.45</b>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                      <div class="courses">
+                        <img src="{{ url_for('static', filename='./images/dev4.jpg')}}" alt="webdev icon">
+                        <div class="course">
+                          <h5>The complete web developer in 2023: zero to mastery</h5>
+                          <p class="text-muted">James Lincoln</p>
+                          <span id="rating9"></span> (9,627)<br>
+                          <b>$30.50</b>
+                        </div>
+                      </div>
+                  </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+<!--ratings and statistics-->
+      <div class="ratings-flex">
+        <div class="ratings">
+          <h4>25K+</h4>
+          <p>CLASSES</p>
+        </div>
+        <div class="ratings">
+          <h4>600K+</h4>
+          <p>MEMBERS</p>
+        </div>
+        <div class="ratings">
+          <h4>8K+</h4>
+          <p>TUTORS</p>
+        </div>
+        <div class="ratings">
+          <h4>4.8 <span id="rating13"></span></h4>
+          <p>APP STORE RATING</p>
+        </div>
+      </div>
+<!--skills check-->
+      <div class="skill-list">
+        <div class="creative"><h5>Get creative and expand your career with LearNexa</h5></div>
+        <div class="list">
+          <p><i class="fa fa-check-circle fa-2x"></i> Learn creative skills to achieve and expand your personal and professional goals</p>
+          <p><i class="fa fa-check-circle fa-2x"></i> Tune in and level up at your own pace</p>
+          <p><i class="fa fa-check-circle fa-2x"></i> Go from newbie to master in few days</p>
+          <p><i class="fa fa-check-circle fa-2x"></i> Connect with a global community of learners</p>
+        </div>
+      </div>
+<!---Events-->
+      <div class="container mt-5 mx-0"><h3 style="border-bottom: solid #610094; width: fit-content;">Events:</h3></div>
+      <div class="events-container">
+        <div class="events">
+          <a href="#events">
+            <div class="calimage">
+              <div class="calendar"><h5>15</h5><p>November</p></div>
+            <img src="{{ url_for('static', filename='./images/headway-F2KRf_QfCqw-unsplash.jpg')}}" alt="conference">
+            </div><br>
+            <h5>Leadership and management summit</h5>
+            <p class="text-muted">Register and enroll for the upcoming leadership and management virtual summit organized 
+              by LearNexa to aid its members improve their leadership skills. meet new people from all over the world 
+              and learn from mentors
+            </p>
+          </a>
+        </div>
+        <div class="events">
+          <a href="#events">
+            <div class="calimage">
+              <div class="calendar"><h5>12</h5><p>December</p></div>
+            <img src="{{ url_for('static', filename='./images/communication.jpg')}}" alt="conference">
+            </div><br>
+            <h5>Effective communication skills for business</h5>
+            <p class="text-muted">Enroll for the upcoming virtual summit on effective communiction skills in business, organized 
+              by LearNexa to aid its members improve their communication skills. meet new friends and learn from our mentors
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="featuredbg">
+        <h3>Other courses by category</h3>
+        <div class="featured-topics-flex">
+          <div class="featured-topics">
+            <h5>Development</h5>
+            <div>
+              <a href="#python">Python</a>
+              <p>36,354,994 learners</p>
+            </div>
+            <div><a href="#web">Web Development</a>
+              <p>11,415,615 learners</p>
+            </div>
+            <div><a href="#ml">Machine Learning</a>
+              <p>7,070,015 learners</p>
+            </div>
+          </div>
+          <div class="featured-topics">
+            <h5>Business</h5>
+            <div>
+              <a href="#finance">Financial Analysis</a>
+              <p>1,195,282 learners</p>
+            </div>
+            <div><a href="#sql">SQL</a>
+              <p>5,977,561 learners</p>
+            </div>
+            <div><a href="#pmp">PMP</a>
+              <p>1,733,398 learners</p>
+            </div>
+          </div>
+          <div class="featured-topics">
+            <h5>IT and Software</h5>
+            <div>
+              <a href="#aws">Amazon AWS</a>
+              <p>6,123,456 learners</p>
+            </div>
+            <div><a href="#hacking">Ethical Hacking</a>
+              <p>10,931,066 learners</p>
+            </div>
+            <div><a href="#cyber">Cyber Security</a>
+              <p>3,998,037 learners</p>
+            </div>
+          </div>
+          <div class="featured-topics">
+            <h5>Design</h5>
+            <div>
+              <a href="#photoshop">Photoshop</a>
+              <p>10,909,736 learners</p>
+            </div>
+            <div><a href="#graphics">Graphics Design</a>
+              <p>3,381,052 learners</p>
+            </div>
+            <div><a href="#ui/ux">UI/UX Design</a>
+              <p>2,410,849 learners</p>
+            </div>
+          </div>
+        </div><br>
+        <div class="login"><a href="#explore">Explore Other Courses</a></div>
+      </div>
+
+      <footer>
+        <div class="bottom-links-flex">
+          <div class="bottom-links">
+            <a href="#about">About us</a><br><br>
+            <a href="#contact">Contact us</a><br><br>
+            <a href="#app">Get the App</a><br><br>
+          </div>
+          <div class="bottom-links">
+            <a href="#blog">Blog</a><br><br>
+            <a href="#careers">Careers</a><br><br>
+            <a href="#support">Support</a><br><br>
+          </div>
+          <div class="bottom-links">
+            <a href="#T&C">Terms & Conditions</a><br><br>
+            <a href="#policy">Privacy Policy</a><br><br>
+            <a href="#accessibility">Accessibility</a><br><br>
+          </div>
+        </div>
+
+        <div class="bottom-links-flex">
+          <div class="bottom-links">
+            <img src="{{ url_for('static', filename='./img/20231014_112754_0000.png')}}" alt="LearNexa icon">
+          </div>
+          <div class="bottom-links">
+            <h6>&copy; LearNexa 2023</h6>
+          </div>
+        </div>
+        <p style="text-align: center;"><small>designed by Eustace Mbanefo</small></p>
+      </footer>
+
+
+
+    <script src="{{ url_for('static', filename='aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='LearNexa.js')}}"></script>
+    <script src="{{ url_for('static', filename='splide.min.js')}}"></script>
+     <script>
+       AOS.init();
+     </script>
+     <script>
+      var splide = new Splide( '.splide', {
+         type : 'loop',
+         perPage : 3,
+         rewind : true,
+         gap : '2rem',
+         breakpoints : {
+             640: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '28rem',
+                 autoplay : true,
+             },
+             480: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '6rem',
+             },
+         },
+      } );
+      splide.mount();
+      /**genres splide**/
+     var genre = new Splide('#mygenre', {
+      type : 'loop',
+         perPage : 3,
+         rewind : true,
+         gap : '2rem',
+         breakpoints : {
+             640: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '28rem',
+                 autoplay : true,
+             },
+             480: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '6rem',
+             },
+         },
+    } ).mount();
+     /**webdev splide**/
+     var webdev = new Splide('#webdev', {
+      type : 'loop',
+         perPage : 3,
+         rewind : true,
+         gap : '2rem',
+         breakpoints : {
+             640: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '28rem',
+                 autoplay : true,
+             },
+             480: {
+                 perPage : 1,
+                 gap : '.7rem',
+                 height : '6rem',
+             },
+         },
+    } ).mount();
+      </script>
+    </body>
+</html>

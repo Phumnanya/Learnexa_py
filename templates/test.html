@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+<form>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <div class="forgot">
+            <div class="forgot-content">
+                <input type="checkbox" id="check" name="check">
+                <label for="check">Remember me</label>
+            </div>
+            <div class="forgot-content" style="text-align: end;"><a href="#forgot">Forgot password?</a></div>
+        </div><br>
+        <button type="button" onclick="sendform()">submit</button>
+    </form><br><br>
+
+    <script>
+        async function sendform() {
+            const email= document.getElementById('email').value;
+            const password= document.getElementById('password').value;
+        
+            try {
+                const response = await fetch('http://localhost:5000/api/test', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email,password })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                alert(data.message);
+            }
+            else {
+                alert(data.message);
+            }
+        }
+            catch (error) {
+                alert('Problem encountered: ');
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

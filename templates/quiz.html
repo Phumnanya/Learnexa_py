@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="css/all.css">
+	    <title>Quiz</title>
+
+        <style>
+            form {
+                margin: 5em auto;
+                width: 60%;
+            }
+            button {
+                margin: 2em auto;
+                display: block;
+                padding: 10px 20px;
+                background-color: red;
+                color: white;
+            }
+            form input[type=radio] {
+                margin: 1em;
+            }
+            #show {
+                text-align: center;
+                font-weight: bolder;
+                margin-top: 10em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Quiz App</h1>
+        <form id="myform">
+                <legend id="legend"><h3></h3></legend>
+                <div id="options"></div>
+        </form>
+        <button type="button" onclick="checker()">Submit</button>
+        <p id="show"></p>
+        
+        
+        <script src="quiz.js"></script>
+    </body>
+</html>

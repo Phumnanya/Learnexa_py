@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="stylesheet" href="{{ url_for('static', filename='./css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='dashboard.css')}}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='LearNexa.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='aos css.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='./img/20231014_112754_0000.png')}}">
+	    <title>dashboard</title>  
+    </head>
+    <body class="px-0 mx-0 container-fluid">
+<!---page header-->
+        <header>
+            <div class="contents"><img src="{{ url_for('static', filename='./img/20231014_112754_0000-removebg-preview.png')}}" alt="LearNexa logo"></div>
+            <div class="content">
+              <input type="search" placeholder="search">
+            </div>
+            <div class="contents"><div class="login"><a href="Login.html">Log in</a></div></div>
+            <div class="contents"><div class="login text-light" id="signup"><a href="#signup">Sign up</a></div></div>
+        </header>
+<!---user intro-->
+        <div class="board">
+          <div class="board-content">
+            <img src="{{ url_for('static', filename='./images/generated_photos_64db3eb669f114000a6977b0.jpg')}}" alt="profile pic">
+            <div class="achievements">
+              <p><b>{{ name }}</b></p>
+              <p><i class="fas fa-book"></i> 3 Courses enrolled</p>
+              <p><i class="fas fa-award"></i> 2 Certificates</p>
+            </div>
+          </div>
+          <div class="board-content">
+            <div class="new-course"><a href="index.html">Buy new Course <i class="fas fa-arrow-right"></i></a></div><br><br>
+            <a href="index.html" style="color: inherit; text-decoration: none;">go to Home page <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+<!---Profile and Assessments-->
+        <div class="profile-flex" data-aos=fade-up>
+          <div class="profile" data-aos=fade-up>
+            <form>
+              <input type="file" id="dp" name="dp"><br><br><br>
+              <label for="fname">Name</label><br>
+                <input type="text" id="fname" name="fname" value="{{ name }}" readonly><br><br>
+              <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob" readonly><br><br>
+              <label for="num">Phone</label><br>
+                <input type="number" id="num" name="number" readonly><br><br>
+              <label for="email">Email</label><br>
+                <input type="email" id="profile-email" name="email" value="{{ email }}" readonly><br><br>
+          </form>
+          <input type="submit" id="edit" value="Edit" onclick="profileedit(this)">
+          <input type="submit" id="save" value="Save" onclick="saveedit(this)">
+          </div>
+          <div class="assessment" data-aos=fade-up>
+            <h4>Quiz Assessments</h4>
+            <div class="quiz"><a href="quiz.html">Python - Hello_World</a></div>
+            <div class="quiz"><a href="quiz.html">JavaScript - loops & functions</a></div>
+            <div class="quiz"><a href="quiz.html">Python - Import modules</a></div>
+            <div class="quiz"><a href="quiz.html">Web Development - Data structures</a></div>
+            <div class="quiz"><a href="quiz.html">Python - Objects and Classes</a></div>
+            <div class="quiz"><a href="quiz.html">Python - Inheritance</a></div>
+          </div>
+        </div><br><br><br>
+<!---LMS tracking-->
+        <div class="container"><h3><b>Learning Progress</b></h3></div>
+        <div class="lms">
+          <div class="line-graph"><canvas id="linegraph" style="width:100%;max-width:700px"></canvas></div>
+          <div class="chart"><canvas id="chart" style="width:100%;max-width:700px"></canvas></div>
+        </div>
+<!---footer-->
+        <footer>
+            <div class="bottom-links-flex">
+              <div class="bottom-links">
+                <a href="#about">About us</a><br><br>
+                <a href="#contact">Contact us</a><br><br>
+                <a href="#app">Get the App</a><br><br>
+              </div>
+              <div class="bottom-links">
+                <a href="#blog">Blog</a><br><br>
+                <a href="#careers">Careers</a><br><br>
+                <a href="#support">Support</a><br><br>
+              </div>
+              <div class="bottom-links">
+                <a href="#T&C">Terms & Conditions</a><br><br>
+                <a href="#policy">Privacy Policy</a><br><br>
+                <a href="#accessibility">Accessibility</a><br><br>
+              </div>
+            </div>
+    
+            <div class="bottom-links-flex">
+              <div class="bottom-links">
+                <img src="{{ url_for('static', filename='./img/20231014_112754_0000.png')}}" alt="LearNexa icon">
+              </div>
+              <div class="bottom-links">
+                <h6>&copy; LearNexa 2023</h6>
+              </div>
+            </div>
+            <p style="text-align: center;"><small>designed by Eustace Mbanefo</small></p>
+          </footer>
+
+
+
+        <script src="{{ url_for('static', filename='aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='LearNexa.js')}}"></script>
+    <script src="{{ url_for('static', filename='Chart.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js{{ url_for('static', filename='//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js')}}"></script>
+     <script>
+       AOS.init();
+
+/*************************chart graph******************/
+       const aValues = ["Python", "Javascript", "SQL"];
+        const bValues = [53, 79, 34];
+        const barColors = [
+          "blue",
+          "green",
+          "red",
+        ];
+        
+        new Chart("chart", {
+          type: "doughnut",
+          data: {
+            labels: aValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: bValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Progress chart"
+            }
+          }
+        });
+
+/*****************Line graph*****************/
+        const xValues = [100,200,300,400,500,600,700,800,900,1000];
+          
+          new Chart("linegraph", {
+            type: "line",
+            data: {
+              labels: xValues,
+              datasets: [{ 
+                data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                borderColor: "red",
+                fill: false
+              }, { 
+                data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                borderColor: "green",
+                fill: false
+              }, { 
+                data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                borderColor: "blue",
+                fill: false
+              }]
+            },
+            options: {
+              legend: {display: false}
+            }
+          });
+     </script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="{{ url_for('static', filename='./css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+        <link rel="stylesheet" href= "{{ url_for('static', filename='LearNexa.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='aos css.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='./img/20231014_112754_0000.png')}}">
+	    <title>LearNexa Login</title>  
+    </head>
+    <body class="px-0 mx-0 container-fluid">
+        <header>
+            <div class="contents"><img src="./img/20231014_112754_0000-removebg-preview.png" alt="LearNexa logo"></div>
+            <div class="content">
+              <input type="search" placeholder="search">
+            </div>
+            <div class="contents"><button type="button"><i class="fas fa-shopping-cart fa-2x"></i></button></div>
+            <div class="contents"><div class="login"><a href="#login">Log in</a></div></div>
+            <div class="contents"><div class="login text-light" id="signup"><a href="{{url_for('signup')}}">Sign up</a></div></div>
+        </header>
+<!---center the form -->
+            <img src="./img/20231014_112754_0000-removebg-preview.png" alt="LearNexa icon" data-aos=fade-left style="height: 200px; width: 40%; object-fit: cover; display: block; margin: 0 auto;">
+            <div class="form-container" data-aos=fade-up>
+                <h1>Login</h1>
+                <p>Learn creative skills to achieve and expand your professional goals</p><br>
+                <div class="google">
+                    <a href="#google"><img src="./images/icons8-google.svg" alt="google icon"> Login with Google</a>
+                </div>
+                <div class="google">
+                    <a href="#facebook"><img src="./images/icons8-facebook.svg" alt="google icon"> Login with Facebook</a>
+                </div><br><br>
+                <p class="text-muted" style="text-align: center;">or Login with email</p><br><br>
+
+                <form method="post" action="/login">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <div class="forgot">
+                        <div class="forgot-content">
+                            <input type="checkbox" id="check" name="check">
+                            <label for="check">Remember me</label>
+                        </div>
+                        <div class="forgot-content" style="text-align: end;"><a href="#forgot">Forgot password?</a></div>
+                    </div><br>
+                    <input type="submit" value="submit">
+                </form><br><br>
+                <b>Not registered yet?</b> <a href="signup.html" style="color:#610094;">Create an Account now</a>
+            </div><br>
+<!---footer-->
+        <footer>
+            <div class="bottom-links-flex">
+              <div class="bottom-links">
+                <a href="#about">About us</a><br><br>
+                <a href="#contact">Contact us</a><br><br>
+                <a href="#app">Get the App</a><br><br>
+              </div>
+              <div class="bottom-links">
+                <a href="#blog">Blog</a><br><br>
+                <a href="#careers">Careers</a><br><br>
+                <a href="#support">Support</a><br><br>
+              </div>
+              <div class="bottom-links">
+                <a href="#TC">Terms & Conditions</a><br><br>
+                <a href="#policy">Privacy Policy</a><br><br>
+                <a href="#accessibility">Accessibility</a><br><br>
+              </div>
+            </div>
+    
+            <div class="bottom-links-flex">
+              <div class="bottom-links">
+                <img src="./img/20231014_112754_0000.png" alt="LearNexa icon">
+              </div>
+              <div class="bottom-links">
+                <h6>&copy; LearNexa 2023</h6>
+              </div>
+            </div>
+            <p style="text-align: center;"><small>designed by Eustace Mbanefo</small></p>
+          </footer>
+
+
+
+        <script src="{{ url_for('static', filename='aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='LearNexa.js')}}"></script>
+     <script>
+       AOS.init();
+     </script>
+    </body>
+</html>
